@@ -5,6 +5,7 @@
     <modules>
         <module>order</module>
         <module>stock</module>
+        <module>nacos_config_client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

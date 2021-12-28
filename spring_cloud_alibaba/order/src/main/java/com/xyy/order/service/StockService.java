@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author: zyf
  * @create: 2021-12-28 10:14
  **/
-@FeignClient(value = "stock-service")
+@FeignClient(value = "stock-service",fallback = StockFallbackService.class)
 public interface StockService {
     /**
      * 修改库存
