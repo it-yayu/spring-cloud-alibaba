@@ -3,6 +3,7 @@ package com.xyy.order.service;
 import org.springframework.stereotype.Component;
 
 /**
+ * 远程调用失败,降级处理.
  * @author: zyf
  * @create: 2021-12-28 16:13
  **/

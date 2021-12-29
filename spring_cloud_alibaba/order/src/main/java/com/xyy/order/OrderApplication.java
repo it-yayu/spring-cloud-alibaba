@@ -1,5 +1,6 @@
 package com.xyy.order;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
  **/
 @SpringBootApplication
 @EnableFeignClients
+@MapperScan({"com.xyy.*.dao.mapper"})
 public class OrderApplication {
     public static void main(String[] args) {
 

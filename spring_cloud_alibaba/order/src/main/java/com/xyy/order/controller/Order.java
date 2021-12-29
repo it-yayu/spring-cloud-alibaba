@@ -1,5 +1,6 @@
 package com.xyy.order.controller;
 
+import com.xyy.order.service.OrderService;
 import com.xyy.order.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,10 @@ public class Order {
     @Autowired
     RestTemplate restTemplate;
 
+    @Autowired
+    private OrderService orderService;
+
+
     @GetMapping("/one")
     public String order() {
         System.out.println("开始生成订单");
@@ -29,8 +34,7 @@ public class Order {
 
     @GetMapping("/two")
     public String orderTwo() {
-        System.out.println("开始生成订单");
-        return stockService.stock();
+        return orderService.makeOrder();
     }
 
 }
