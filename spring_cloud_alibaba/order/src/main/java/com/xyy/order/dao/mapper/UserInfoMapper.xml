@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "<http://mybatis.org/dtd/mybatis-3-mapper.dtd>">
+<mapper namespace="com.xyy.order.dao.mapper.UserInfoMapper">
+
+    <select id="list" resultType="com.xyy.order.dao.pojo.User">
+        select * from common_user
+        <where>
+                AND is_del=1
+            <if test="data !=null and data != '' ">
+                AND CONCAT(IFNULL(email,''), IFNULL(mobile,''),IFNULL(name,'')) LIKE CONCAT(CONCAT('%',#{data},'%'))
+            </if>
+        </where>
+    </select>
+</mapper>

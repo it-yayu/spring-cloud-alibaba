@@ -6,6 +6,7 @@
         <module>order</module>
         <module>stock</module>
         <module>nacos_config_client</module>
+        <module>sentinel_service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -65,6 +66,11 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${hutool.version}</version>
+        </dependency>
+        <!--数据校验-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
 
