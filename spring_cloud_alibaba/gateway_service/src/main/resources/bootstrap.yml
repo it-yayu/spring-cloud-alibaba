@@ -6,10 +6,10 @@ spring:
       discovery:
         server-addr: localhost:8848 #Nacos地址
         namespace: 0f923451-26b7-4b13-a8ff-c23c686abd25 #设置注册的空间 不设置默认public
-    gateway:
-      routes:
-        - id: order
-        - uri: lb://order-service
+#    gateway:
+#      routes:
+#        - id: order
+#        - uri: lb://order-service
 #      config:
 #        server-addr: localhost:8848 #Nacos地址
 #        file-extension: yaml #这里我们获取的yaml格式的配置
