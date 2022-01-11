@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -20,11 +19,11 @@ import java.util.Set;
 @RequestMapping("/redis")
 public class RedisTest {
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String,Object> redisTemplate;
 
     @GetMapping("/set")
     public Set getSet() {
-        redisTemplate.opsForSet().add("setList", "1,2", "22", 3);
+        redisTemplate.opsForSet().add("setList", "1,2", "22", "3");
         return redisTemplate.opsForSet().members("setList");
     }
 

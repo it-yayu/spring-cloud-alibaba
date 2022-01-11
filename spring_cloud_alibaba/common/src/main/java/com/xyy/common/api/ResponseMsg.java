@@ -1,14 +1,14 @@
-package com.xyy.order.util;
+package com.xyy.common.api;
+
+
+import com.xyy.common.constant.CodeConstant;
 
 import java.io.Serializable;
 
-/**
- *
- * @author yangjunguo
- * @date 21/5/26
- * 统一的响应对象
- */
 
+/**
+ * @author v-zhangyafeng3
+ */
 public class ResponseMsg<T> implements Serializable {
 
     private int code;

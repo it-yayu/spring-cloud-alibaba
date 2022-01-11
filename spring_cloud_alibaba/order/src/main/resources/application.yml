@@ -7,7 +7,7 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-        namespace: 0f923451-26b7-4b13-a8ff-c23c686abd25
+#        namespace: 0f923451-26b7-4b13-a8ff-c23c686abd25
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/portal?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8

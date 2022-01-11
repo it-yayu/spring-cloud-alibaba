@@ -15,6 +15,7 @@
         <module>nacos_config_client</module>
         <module>sentinel_service</module>
         <module>gateway_service</module>
+        <module>common</module>
     </modules>
 
     <parent>
@@ -32,10 +33,19 @@
         <mysql.version>8.0.18</mysql.version>
         <mybatis.plus.version>3.4.2</mybatis.plus.version>
         <hutool.version>5.3.10</hutool.version>
+        <common.version>0.0.1-SNAPSHOT</common.version>
     </properties>
 
 
     <dependencies>
+
+        <!--通用模块-->
+        <dependency>
+            <groupId>com.xyy.common</groupId>
+            <artifactId>common</artifactId>
+            <version>${common.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -99,24 +109,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
-        </plugins>
-    </build>
 
 </project>

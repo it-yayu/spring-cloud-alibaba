@@ -1,7 +1,8 @@
 package com.xyy.order.service;
 
+import com.xyy.common.api.ResponseMsg;
 import com.xyy.order.service.dto.UserDto;
-import com.xyy.order.util.ResponseMsg;
+
 
 /**
  * @author: zyf

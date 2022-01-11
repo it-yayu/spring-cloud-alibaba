@@ -1,8 +1,8 @@
 package com.xyy.order.controller;
 
+import com.xyy.common.api.ResponseMsg;
 import com.xyy.order.service.UserInfoService;
 import com.xyy.order.service.dto.UserDto;
-import com.xyy.order.util.ResponseMsg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
