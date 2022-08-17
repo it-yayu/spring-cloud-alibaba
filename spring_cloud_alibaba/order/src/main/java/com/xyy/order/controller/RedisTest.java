@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author yayu
@@ -30,7 +31,7 @@ public class RedisTest {
     @GetMapping("/list")
     public List getList() {
         redisTemplate.delete("list");
-        redisTemplate.opsForList().leftPush("list", "1");
+        redisTemplate.opsForList().leftPush("list", "1", TimeUnit.HOURS);
         redisTemplate.opsForList().leftPush("list", "2");
         redisTemplate.opsForList().leftPush("list", "3");
         return  redisTemplate.opsForList().range("list",0,-1);
